@@ -59,3 +59,60 @@ my_list = [0, 3, 12, 8, 2]
 print(5 in my_list)
 print(5 not in my_list)
 print(12 in my_list)
+
+# Getting Largeres element form the given list
+
+my_list = [17, 3, 11, 5, 1, 9, 7, 15, 13]
+largest = my_list[0]
+ 
+for i in my_list:
+    if i > largest:
+        largest = i
+ 
+print("The largest number among the list is: ",largest)
+# 👇👇👇 the same as the above
+my_list = [17, 3, 11, 5, 1, 9, 7, 15, 13]
+largest = my_list[0]
+ 
+for i in my_list[1:]: # 1 to the end of the list
+    if i > largest:
+        largest = i
+ 
+print(largest)
+
+# find if the number where is found
+
+my_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+to_find = 1
+found = False
+for i in my_list:
+    found= i ==to_find
+    if found:
+        break
+    
+if found:
+    print("I get the number at the index of ",i-1)
+else:
+    print("Absent")
+ 
+""" 
+EXersice 
+Let's assume that you've chosen the following numbers in the lottery: 3, 7, 11, 42, 34, 49.
+
+The numbers that have been drawn are: 5, 11, 9, 42, 3, 49.
+
+The question is: how many numbers have you hit? 
+ """
+drawn = [5, 11, 9, 42, 3, 49]
+bets = [3, 7, 11, 42, 34, 49]
+hit =0
+mached_num= []
+
+for number in bets:
+    if number in drawn:
+        hit+=1
+        mached_num.append(number)
+        
+print("You guesd only " +str(hit)+ " numbers")
+print("Matched numbers are:",mached_num)
+
