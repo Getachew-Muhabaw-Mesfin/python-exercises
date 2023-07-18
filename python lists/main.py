@@ -116,3 +116,13 @@ for number in bets:
 print("You guesd only " +str(hit)+ " numbers")
 print("Matched numbers are:",mached_num)
 
+# Getting Unique number in a given list
+
+my_list = [1, 2, 4, 4, 1, 4, 2, 6, 2, 9]
+uniq_num =[]
+for i in my_list:
+    if i not in uniq_num:
+        uniq_num.append(i)
+
+print("The list with unique elements only:")
+print(uniq_num)
