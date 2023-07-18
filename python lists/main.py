@@ -33,3 +33,29 @@ Note: not to end but to end - 1. An element with an index equal to end is the fi
 
 Using negative values for both start and end is possible (just like in indexing) 
 """
+# Copying the entire list.
+list_1 = [1]
+list_2 = list_1[:]
+list_1[0] = 2
+print(list_2)
+
+# Copying some part of the list.
+my_list = [10, 8, 6, 4, 2]
+new_list = my_list[1:-1] # Not including the last item 
+print(new_list)
+"""To repeat:
+
+👉start is the index of the first element included in the slice;
+👉end is the index of the first element not included in the slice.
+"""
+
+"""
+The first of them (in) checks if a given element (its left argument) is currently stored somewhere inside the list (the right argument) ‒ the operator returns True in this case.
+
+The second (not in) checks if a given element (its left argument) is absent in a list ‒ the operator returns True in this case. 
+"""
+my_list = [0, 3, 12, 8, 2]
+
+print(5 in my_list)
+print(5 not in my_list)
+print(12 in my_list)
